@@ -12,7 +12,7 @@ from natsort import natsorted
 
 def main(args):
 
-  SAM_files = os.path.join(args.CPGSAM_output_path[0],  "*.nii.gz")  #Search Pattern
+  SAM_files = os.path.join(args.CPGSAM_output_path[0],  "*CPGSAM.nii.gz")  #Search Pattern
   SAM_unthresh_files= glob.glob(SAM_files, recursive=True)
   SAM_unthresh_files= natsorted(SAM_unthresh_files)
 
