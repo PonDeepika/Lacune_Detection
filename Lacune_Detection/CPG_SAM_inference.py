@@ -83,7 +83,7 @@ def main(args):
 
         bboxes = get_bounding_boxes((result>0.5)*1)
         sum_value = 350/pix_dim[0,1]
-        conf_threshold =0.90
+        conf_threshold =0.75
         if pix_dim[0,3]<4: # Inspect coronal and sagittal only is slice thickness is less than 4 mm.       
           for bbox in bboxes:
              #  Inspect the Coronal slice through the centroid using SAM
